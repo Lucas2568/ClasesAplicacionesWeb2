@@ -1,13 +1,31 @@
+function mostrarAlerta(mensaje, esExito = true) {
+	const alerta = document.getElementById('alerta');
+	const alertaMensaje = document.getElementById('alerta-mensaje');
+	const alertaCerrar = document.getElementById('alerta-cerrar');
+	
+	if (!alerta || !alertaMensaje) return;
+	
+	alertaMensaje.textContent = mensaje;
+	alerta.classList.remove('alerta-oculta', 'alerta-exito', 'alerta-error');
+	alerta.classList.add(esExito ? 'alerta-exito' : 'alerta-error');
+	
+	alertaCerrar.onclick = () => {
+		alerta.classList.add('alerta-oculta');
+	};
+}
+
 async function obtenerDatos() {
 	try {
 		const respuesta = await fetch('recursos/datos/productos.json');
 		if (!respuesta.ok) throw new Error(`HTTP ${respuesta.status}`);
 		const datos = await respuesta.json();
 		renderProductos(datos);
+		mostrarAlerta('✓ Los datos han sido renderizados correctamente.', true);
 	} catch (error) {
 		console.error('Error al obtener datos:', error);
 		const cont = document.getElementById('contenedor');
 		if (cont) cont.innerHTML = '<p class="error">No se pudieron cargar los productos.</p>';
+		mostrarAlerta('✗ Error al renderizar los datos. Intenta nuevamente.', false);
 	}
 }
 

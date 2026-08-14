@@ -45,6 +45,66 @@ body {
     font-size: 16px;
 }
 
+/* Alerta de renderización */
+.alerta {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    transition: opacity 0.3s ease;
+}
+
+.alerta-oculta {
+    display: none;
+    opacity: 0;
+}
+
+.alerta-exito {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.alerta-error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.alerta-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+#alerta-mensaje {
+    margin: 0;
+    flex: 1;
+}
+
+.alerta-boton {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: inherit;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.alerta-boton:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 .producto .precio {
     display: flex;
     color: #284560;

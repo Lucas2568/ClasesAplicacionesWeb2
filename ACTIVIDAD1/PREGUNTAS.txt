@@ -1,0 +1,15 @@
+Responder las siguientes preguntas:
+
+¿Qué tipo de proceso realiza fetch()?
+fetch() realiza una solicitud HTTP para obtener un recurso remoto, en este caso, un archivo JSON de nuestro directorio, aunque también podría bajarlo desde un servidor remoto.
+
+¿Por qué es asíncrono?
+Las solicitudes de red pueden tomar tiempo.
+Si fuera síncrono, bloquearía toda la ejecución del navegador mientras espera la respuesta.
+Con async/await, el navegador puede seguir respondiendo a interacciones del usuario mientras se descarga el archivo.
+
+¿Qué protocolo utiliza en este caso?
+Utiliza el protocolo HTTP
+
+¿Cuál es el URL completo al recurso productos.json?
+El URL completo sería: http://localhost:3000/ACTIVIDAD1/recursos/datos/productos.json
