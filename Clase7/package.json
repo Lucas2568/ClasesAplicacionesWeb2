@@ -1,10 +1,11 @@
 {
-  "name": "ClasesAplicacionesWeb2",
+  "name": "Clase7",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch index.mjs",
+    "start": "node index.mjs"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +13,10 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "^11.22.0",
+      "version": "11.25.0",
       "onFail": "download"
     }
   },
+  "packageManager": "pnpm@11.25.0",
   "type": "module"
 }
