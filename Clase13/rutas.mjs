@@ -2,7 +2,7 @@
 import { Router } from 'express'
 
 const rutaApi = new express.Router()
-
+// /api/vi -> vi indica version 1, muy importante utilizarlo en el examen
 app.get('/api/vi/camisetas',(req, res) => {
    res.json([{
     "id" : 1,

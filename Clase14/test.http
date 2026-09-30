@@ -1,0 +1,4 @@
+## Separar con numeral los end points de nuestro parcial
+
+//ejemplo con pokeapi, nuestro codigo quedara con localhost
+GET https://pokeapi.co/api/v2/pokemon/blastoise
